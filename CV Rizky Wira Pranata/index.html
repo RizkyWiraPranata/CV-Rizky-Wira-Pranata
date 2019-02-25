@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CV Rizky Wira Pranata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/style-cv.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./image/icon.png">
+    <link rel="stylesheet" href="./styles/stylenum.css">
+    <script src="./modulos/jspdf.min.js"></script>
+    <script src="./scripts/createPDF.js"></script>
+</head>
+<body>
+    <div id="tam"></div>
+    <header>
+        <h1>Rizky Wira Pranata</h1>
+    </header>
+    <section>
+        <div id="Izquierda2" onclick="setMenu()"><span class="icon-th-list"></span></div>
+        <div id="Izquierda">
+            <div class="center">
+                <img id="imgPer" src="./image/Wira.jpg">
+            </div>
+            <div class="ct2">
+                <h3>Rizky WIra Pranata</h3>
+                <!-- <h4>Pasante Ingenieria en Sistemas Computacionales</h4> -->
+            </div>
+            
+            <div class="Botton">
+                <ul>
+                    <li onclick='setPantalla("btnDP")' onmouseover="setHover(1,'btnDP')" onmouseout="setHover(0,'btnDP')"><a id="btnDP" href="#">Data Personal</a></li>
+                    <li onclick='setPantalla("btnK")' onmouseover="setHover(1,'btnK')" onmouseout="setHover(0,'btnK')"><a id="btnK" href="#">Keterampilan</a></li>
+                    <li onclick='setPantalla("btnHP")' onmouseover="setHover(1,'btnHP')" onmouseout="setHover(0,'btnHP')"><a id="btnHP" href="#">History Pendidikan</a></li>
+                    <li onclick='setPantalla("btnPR")' onmouseover="setHover(1,'btnPR')" onmouseout="setHover(0,'btnPR')"><a id="btnPR" href="#">Prestasi</a></li>
+                    <li onclick='setPantalla("btnPO")' onmouseover="setHover(1,'btnPO')" onmouseout="setHover(0,'btnPO')"><a id="btnPO" href="#">Pengalaman Organisasi</a></li>
+                    <li onclick='setPantalla("btnC")' onmouseover="setHover(1,'btnC')" onmouseout="setHover(0,'btnC')"><a id="btnC" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="Main">
+            <div class="kotak" id="DataPersonal" >
+                <div class="judul">
+                    <img class="imageCur" src="./image/datapersonal.png" >
+                    <div class="text">Data Personal</div> 
+                </div>
+                <div class="konten">
+                    <p>Nama Lengkap : Rizky Wira Pranata</p>    
+                    <p>TTL : Mataram, 02 Maret 1999</p>
+                    <p>Status : Mahasiswa</p>
+                    <p>Kewarnegaraan : Indonesia</p>
+                    <p>Umur : 20 Tahun</p>
+                </div>
+            </div>
+           
+            <div class="kotak" id="Keterampilan">
+                <div class="judul">
+                    <img class="imageCur" src="./image/softskill.png" >
+                    <div class="text">Keterampilan</div>
+                </div>
+                <div class="konten">
+                    <div class="beberapa-bar">
+                        <div class="kata">PhotoShop:</div>
+                        <div class="barra-num">
+                                <div class="barra-ext">
+                                    <div class="barra-gene" id="persentase">50%</div>
+                                </div>
+                        </div>
+                        <div class="beberapa-bar">
+                            <div class="kata">Adobe Premiere:</div>
+                            <div class="barra-num">
+                                    <div class="barra-ext">
+                                        <div class="barra-gene" id="persentase1">80%</div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="beberapa-bar">
+                            <div id="er" class="kata">Database dan MySql:</div>
+                            <div class="barra-num">
+                                    <div class="barra-ext">
+                                        <div class="barra-gene" id="persentase2">70%</div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="beberapa-bar">
+                            <div class="kata">Microsoft Word:</div>
+                            <div class="barra-num">
+                                    <div class="barra-ext">
+                                        <div class="barra-gene" id="persentase3">90%</div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="beberapa-bar">
+                            <div class="kata">Kerja Tim:</div>
+                            <div class="barra-num">
+                                    <div class="barra-ext">
+                                        <div class="barra-gene" id="persentase4">95%</div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="beberapa-bar">
+                            <div class="kata">HTML & CSS:</div>
+                            <div class="barra-num">
+                                    <div class="barra-ext">
+                                        <div class="barra-gene" id="persentase5">35%</div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="kotak" id="HistoryPendidikan">
+                <div class="judul">
+                    <img class="imageCur" src="./image/pendidikan.png" >
+                    <div class="text">History Pendidikan</div>
+                </div>
+                <div class="konten">
+                    <p class="Pendidikan id="PendidikanUniv">Universitas</p>
+                    <div class="descripsi">
+                        <p>Telkom University</p>
+                        <p>Fakultas Informatika</p>
+                        <p>S1 Informatika</p>
+                        <p>2017</p>
+                    </div>
+                    <p class="Pendidikan">Sekolah</p>
+                    <div class="descripsi">
+                        <p>TK Adhiyaksa</p>
+                        <p>SDN 13 Ampenan</p>
+                        <p>SMPN 06 Mataram</p>
+                        <p>SMAN 01 Mataram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kotak" id="Prestasi">
+                <div class="judul">
+                    <img class="imageCur" src="./image/piala.png" >
+                    <div class="text">Prestasi</div>
+                </div>
+                <div class="konten">
+                    <div id="bloquesExp">
+                            <span class="iconosExp icon-number"></span>
+                            <p id="juara">Juara 1 Kejuaraan Planopolis Makethopia ITS tingkat Nasional</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kotak" id="PengalamanOrganisasi">
+                <div class="judul">
+                    <img class="imageCur" src="./image/organisasi.png" >
+                    <div class="text">Pengalaman Organisasi</div>
+                </div>
+                 <div class="konten">
+                    <p>Palasma(Pecinta Alam SMAN 01 Mataram)</p>    
+                    <p>Staff Magang Komisi Aspirasi BPM IF 2018</p>
+                    <p>Staff Komisi Aspirasi</p>
+                </div>
+            </div>
+            
+            <div class="kotak" id="Contact">
+                <div class="judul">
+                    <img class="imageCur" src="./image/Telepon.png" >
+                    <div class="text">Contact</div>
+                </div>
+                <div class="konten" id="ctn1">
+                    <div id="bloque1">
+                        <div class="segmen">
+                            <div class="img-contac1">
+                                <img class="img-contact" src="./image/whaticon.png">
+                                <span class="logotip" id="logo">WhatsApp</span>
+                            </div>
+                            <div class="pernyataan">082341771816</div>
+                        </div>
+                        <div class="segmen">
+                            <div class="img-contac1">
+                                    <img class="img-contact" id="fb" src="./image/fbIcon.ico">
+                                </a>
+                                <span class="logotip" id="logo">Facebook</span>
+                            </div>
+                            <div class="pernyataan">Rizky Wira Pranata</div>
+                        </div>
+                        <div class="segmen">
+                            <div class="img-contac1">
+                                    <img class="img-contact" src="./image/twiter.png">
+                                </a>
+                                <span class="logotip" id="logo">Twitter</span>
+                            </div>
+                            <div class="pernyataan">Rizkywiraa</div>
+                        </div>
+                    </div>
+                    <div id="bloque2">
+                            <div class="segmen">
+                                <div class="img-contac1">
+                                        <img class="img-contact" src="./image/gmail.png">
+                                    </a>
+                                    <span class="logotip" id="logo">Gmail</span>
+                                </div>
+                                <div class="pernyataan">rizkywirap@gmail.com</div>
+                            </div>
+                            <div class="segmen">
+                                <div class="img-contac1">
+                                        <img class="img-contact" src="./image/giticon.png">
+                                    </a>
+                                    <span class="logotip" id="logo">Github</span>
+                                </div>
+                                <div class="pernyataan">Rizky Wira Pranata</div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+
+    <script>
+        // document.getElementById('Derecha').style.height = ((screen.height-359))+"px";
+    </script>
+</body>
+</html>
